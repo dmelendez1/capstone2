@@ -67,7 +67,7 @@ body, html {
 }
 
 .why-wildscape-section p {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Prata', serif;
     font-size: 20px; 
     max-width: 800px; 
     margin: 0 auto; 
@@ -80,5 +80,78 @@ body, html {
 
     .why-wildscape-section p {
         font-size: 18px;
+
     }
 }
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex-basis: 33.333%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text {
+    text-align: center;
+    padding: 15px;
+}
+
+.ns-block .intro h3 {
+    font-family: 'Prata', serif;
+    
+}
+
+.card .text h4,
+.card .text h5,
+.card .text h6 {
+    font-family: 'Prata', serif;
+}
+
+.card .text p {
+    
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px; 
+    color: #333; 
+    
+}
+
+
+
+/*.text p {
+    margin-top: 0;
+}*/
+
+@media (max-width: 768px) {
+    .card-wrapper {
+        flex-direction: column;
+    }
+    .card {
+        flex-basis: 100%;
+    }
+}
+
