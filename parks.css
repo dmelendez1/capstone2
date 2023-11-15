@@ -1,0 +1,126 @@
+.search-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#searchResults {
+    margin-top: 20px;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
+/*nav bar*/
+.navbar {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    z-index: 1000; 
+    
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: whitesmoke;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+}
+
+.navbar:hover {
+    background-color: lightgray !important; 
+    transition: background-color 0.3s ease; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+#footer {
+    background: url('../images2/mtfooter3.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px 20px; 
+    font-family: 'Philosopher', sans-serif;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+}
+
+.left-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 10px;
+}
+
+.column {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.logo-address img {
+    max-width: 20%;
+    height: auto;
+}
+
+
+
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+.right-side {
+   
+    min-width: 300px; 
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.newsletter-form button {
+    background: black;
+    color: white;
+    font-family: 'Prata', serif;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .left-side {
+        flex-direction: column;
+    }
+}
