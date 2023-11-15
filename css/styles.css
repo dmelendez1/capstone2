@@ -16,6 +16,14 @@ body, html {
     font-size: 20px;
 }
 
+.navbar:hover {
+    background-color: lightgray !important; 
+    transition: background-color 0.3s ease; 
+}
+
+
+
+
 .background-container {
     background: url('../images2/bg.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -23,6 +31,8 @@ body, html {
     width: 100%;
 }
 
+
+/*Adventure starts here & Welcome to Earth*/
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -53,6 +63,8 @@ body, html {
 }
 
 
+
+/*why wildscape*/
 .why-wildscape-section {
     text-align: center;
     padding: 40px 20px; /
@@ -87,6 +99,7 @@ body, html {
 
 
 
+/*cards*/
 .container {
     max-width: 1200px;
     margin: auto;
@@ -98,6 +111,28 @@ body, html {
     margin-bottom: 20px;
 }
 
+
+.ns-block .intro h3 {
+    font-family: 'Prata', serif;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    gap: 24px; 
+}
+
+.ns-block .intro h3 span.border-t {
+    border-top: 1px solid; 
+    flex-grow: 1;
+    height: 0;
+    min-width: 55px;
+}
+
+.ns-block .intro h3 span.font-bold {
+    font-weight: bold;
+}
+
+
+
 .card-wrapper {
     display: flex;
     justify-content: space-between;
@@ -105,9 +140,10 @@ body, html {
 }
 
 .card {
-    flex-basis: 33.333%;
-    margin: auto;
+    flex-basis: calc(33.333% - 20px);
+    margin: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
 }
 
 .card .image {
@@ -119,11 +155,7 @@ body, html {
 .text {
     text-align: center;
     padding: 15px;
-}
-
-.ns-block .intro h3 {
-    font-family: 'Prata', serif;
-    
+    box-sizing: border-box; 
 }
 
 .card .text h4,
@@ -133,11 +165,9 @@ body, html {
 }
 
 .card .text p {
-    
     font-family: 'Philosopher', sans-serif;
     font-size: 16px; 
-    color: #333; 
-    
+    color: #333;
 }
 
 
@@ -157,77 +187,163 @@ body, html {
 
 
 
-.footer {
-   
+
+
+/* Style for the Partners Section */
+
+.partners-section {
+    margin-top: 80px; 
+    text-align: center;
     padding: 20px;
-    background-color: #f5f5f5; 
-    color: #333; 
+    background-color: white;
+
 }
 
 
-.footer-background {
-    background-image: url('../images2/mtbg2.jpg'); 
-    background-size: cover; 
-    background-position: center;
-    color:white
+.partners-section h3 {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    gap: 24px; 
+    margin-bottom: 20px; 
+    
+}
+
+.partners-section h3 span.border-t {
+    border-top: 1px solid; 
+    flex-grow: 1;
+    height: 0;
+    min-width: 55px;
+   
+}
+
+.partners-section h3 span.font-bold {
+    font-weight: bold; 
+    font-family: 'Philosopher', sans-serif;
+    
+}
+
+
+.partners-section h3 span.text-utility-sm {
+    font-size: 35px; 
+    
+}
+
+
+.partner-logos {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px; 
+}
+
+.partner-logos img {
+    max-width: 200px; 
+    margin: 20px;
+    height: 100px; 
+}
+
+
+.section p {
+    font-size: 26px; 
+    color: #333; 
+    max-width: 800px; 
+    margin: 50px auto; 
+    margin-bottom: 200px;
+    font-family: 'Prata', serif;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .partner-logos img {
+        max-width: 70px;
+    }
+
+}
+
+
+
+
+
+
+/*footer*/
+
+#footer {
+    background: url('../images2/mtfooter3.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px 20px; 
+    font-family: 'Philosopher', sans-serif;
 }
 
 
 .grid-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+}
+
+.left-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 10px;
+}
+
+.column {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.logo-address img {
+    max-width: 20%;
+    height: auto;
 }
 
 
-.logo-section, .second-section {
-    flex-basis: 50%; 
-    padding: 10px;
-}
 
 
-@media (max-width: 768px) {
-    .grid-container {
-        flex-direction: column;
-    }
-    .logo-section, .second-section {
-        flex-basis: 100%;
-    }
-}
-
-
-.logo-section img {
-    
-width: 100px;
-height: auto; 
-display: block; 
-margin: 0 auto; 
-}
-
-.address, .contact-info, .social-media-icons {
-    margin-top: 10px;
-}
-
-
-.social-media-icons a {
-    margin: 0 5px;
-}
-
-.social-media-icons svg {
-    height: 24px;
-    width: 24px;
-}
-
-
-.second-section .footer-links {
+.footer-links ul {
     list-style: none;
     padding: 0;
 }
 
-.second-section .footer-links li a {
-    color: #333;
+.footer-links ul li a {
     text-decoration: none;
-    font-size: 16px;
-    display: block;
-    margin-bottom: 5px;
+    color: #000;
+}
+
+
+
+.right-side {
+   
+    min-width: 300px; 
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.newsletter-form button {
+    background: black;
+    color: white;
+    font-family: 'Prata', serif;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .left-side {
+        flex-direction: column;
+    }
 }
