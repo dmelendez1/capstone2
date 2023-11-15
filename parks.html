@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Parks Search</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="parks.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="#">
+            <img src="images2/wildscapelogo2.png" alt="Logo" style="width: 100px;"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#parks">Parks</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mountains">Mountains</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
+                <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="container">
+        <div class="search-form row">
+            <div class="col-md-6">
+                <select id="locationDropdown" class="form-control">
+                    
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select id="typeDropdown" class="form-control">
+                    
+                </select>
+            </div>
+        </div>
+        <div id="searchResults" class="row">
+            
+        </div>
+    </div>
+    
+
+    
+    <footer id="footer">
+        <div class="grid-container">
+            <div class="left-side">
+                <div class="column logo-address">
+                    <img src="images2/wildscapelogo.png" alt="Logo">
+                    <p>123 Address St, City</p>
+                    <p>Phone: 123-456-7890</p>
+                    <p>Fax: 123-456-7891</p>
+                    <div class="column social-icons">
+                        <a href="https://www.facebook.com/">
+                            <img src="https://img.icons8.com/fluent/48/000000/facebook-new.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.twitter.com/">
+                            <img src="https://img.icons8.com/fluent/48/000000/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                <div class="column footer-links">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Log In</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-side">
+                <h2>Stay Inspired</h2>
+                <form class="newsletter-form">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <button type="submit">Sign up for the newsletter</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Wildscape LLC</p>
+            <p>Designed by Diana Melendez</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script src="nationalParkData.js"></script>
+</body>
+</html>
