@@ -3,6 +3,13 @@ body, html {
     margin: 0;
 }
 
+.navbar {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    z-index: 1000; 
+}
+
 .navbar .navbar-nav .nav-item .nav-link {
     color: whitesmoke;
     font-family: 'Philosopher', sans-serif;
@@ -11,15 +18,10 @@ body, html {
 
 .background-container {
     background: url('../images2/bg.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-    /* Set dimensions as needed, for example: */
-    height: 900px; /* or 100vh for full viewport height */
-    width: 100%; /* For full width */
+    height: 100vh;
+    width: 100%;
 }
-
 
 .text-overlay {
     position: absolute;
@@ -51,27 +53,24 @@ body, html {
 }
 
 
-
-
 .why-wildscape-section {
     text-align: center;
-    padding: 40px 20px; /* Adjust padding as needed */
-    background-color: #f5f5f5; /* Or any color that fits your design */
+    padding: 40px 20px; /
+   
 }
 
 .why-wildscape-section h2 {
     font-family: 'Philosopher', sans-serif;
-    font-size: 36px; /* Adjust font size as needed */
-    color: #333; /* Adjust color as needed */
+    font-size: 36px; 
+    color: #333; 
     margin-bottom: 20px;
 }
 
 .why-wildscape-section p {
     font-family: 'Philosopher', sans-serif;
-    font-size: 20px; /* Adjust font size as needed */
-    color: #555; /* Adjust color as needed */
-    max-width: 800px; /* Max width for better readability */
-    margin: 0 auto; /* Center the paragraph */
+    font-size: 20px; 
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
 @media screen and (max-width: 768px) {
