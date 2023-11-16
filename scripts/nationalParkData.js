@@ -6864,13 +6864,15 @@ const nationalParksArray = [
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
+    //console.log("DOMContentLoaded");//
+    //call functions
     populateLocations();
     populateTypes();
 });
 
-function getLocations() {
-    return [...new Set(nationalParksArray.map(park => park.State))];
+function getLocations() { 
+    return [...new Set(nationalParksArray.map(park => park.State))]; //create new state list from the array 
 }
 
 function populateLocations() {
@@ -6893,7 +6895,11 @@ function selectedLocationChanged(selectedLocation) {
 }
 
 function filterLocations(location) {
+
+
     const results = nationalParksArray.filter(park => park.State === location);
+
+
     displayResults(results);
 }
 
@@ -6908,6 +6914,9 @@ function getTypes() {
 
 function populateTypes() {
     const types = getTypes();
+
+    
+
     const typeDropdown = document.getElementById('typeDropdown');
     types.forEach(type => {
         const option = document.createElement('option');
@@ -6926,6 +6935,9 @@ function selectedTypeChanged(selectedType) {
 }
 
 function filterTypes(type) {
+
+    
+
     const results = nationalParksArray.filter(park => {
         
         if (type === "Historical" && park.LocationName.includes("Historical")) return true;
@@ -6937,14 +6949,30 @@ function filterTypes(type) {
 }
 
 function displayResults(results) {
+
+    
+
     const resultsDiv = document.getElementById('searchResults');
-    resultsDiv.innerHTML = '';
+    resultsDiv.textContent = ''; // Clear existing content
+    
     results.forEach(park => {
+        // Create a new div for each park
         const parkDiv = document.createElement('div');
-        parkDiv.innerHTML = `<h3>${park.LocationName}</h3><p>${park.Address}, ${park.City}, ${park.State}</p>`;
+    
+        // Create and append the h3 for the parks name
+        const nameHeading = document.createElement('h3');
+        nameHeading.textContent = park.LocationName;
+        parkDiv.appendChild(nameHeading);
+    
+        // create and append the p the address
+        const addressParagraph = document.createElement('p');
+        addressParagraph.textContent = `${park.Address}, ${park.City}, ${park.State}`;
+        parkDiv.appendChild(addressParagraph);
+    
+        // append the parkDiv to the resultsDiv
         resultsDiv.appendChild(parkDiv);
     });
+    
+
 }
-
-
 
