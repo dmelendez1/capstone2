@@ -34,51 +34,66 @@ body, html {
 
 
 
-/*bsckground*/
-.background-image-section {
+
+/*background*/
+.background-container {
+    background: url('../images2/bgpark.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 70vh;
     width: 100%;
-    height: 50vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 0;
 }
 
-.background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
 }
 
-.bg-bar {
-    background-color: #000; 
+.text-overlay h1 {
+    font-size: 50px; 
+    text-shadow: 2px 2px 4px rgb(44, 43, 43);
 }
 
-.park-location-title {
-    margin-bottom: 20px;
-    font-size: 1.5em;
+
+/* Responsive */
+@media (max-width: 768px) {
+    .text-overlay h1 {
+        font-size: 40px;
+    }
+ 
 }
 
+@media (max-width: 576px) {
+    .text-overlay h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+
+/*bg bar*/
+.park-location-widget {
+    background-color: #40431e; 
+    padding: 20px 0; 
+    width: 100%; 
+}
 
 @media (max-width: 768px) {
-    .park-location-title {
-        font-size: 1.2em;
+    .park-location-widget {
+        padding: 10px 0; 
     }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+.park-location-widget .container-fluid {
+    max-width: none; 
+}
 
 
 

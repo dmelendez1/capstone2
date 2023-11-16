@@ -40,34 +40,51 @@
         </div>
     </nav>
 
-    <section class="background-image-section">
-        <img src="images2/bgforparks.jpg" alt="Background Image" class="background-image">
-    </section>
+    <!--<section class="background-image-section">-->
+        <div class="background-container"></div>
+        
+        <div class="text-overlay">
+            <h1>Adventure starts here</h1>
+        </div>
+    
 
-    <section class="park-location-widget bg-bar">
-        <div class="container">
+
+    <section class="park-location-widget">
+        <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <p class="park-location-title text-white text-center">Park & State Location</p>
+                <div class="col-lg-6 col-md-10">
                     <div class="row">
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-5 form-group">
                             <select id="locationDropdown" class="form-control">
                                 
                             </select>
                         </div>
-                        <div class="col-md-6 form-group">
+
+                        <div class="col-md-5 form-group">
                             <select id="typeDropdown" class="form-control">
                                 
                             </select>
                         </div>
-                    </div>
-                    <div id="searchResults">
-                        
+
+                        <div class="col-md-2 form-group d-flex align-items-center">
+                            <button id="findParkButton" class="btn btn-dark">Find Park</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    <div class="container my-4">
+        <div id="searchResults">
+            
+        </div>
+    </div>
+    
+    
+
+    
     
 
 
