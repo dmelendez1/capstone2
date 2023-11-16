@@ -6858,3 +6858,93 @@ const nationalParksArray = [
     }
     }
 ]
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    populateLocations();
+    populateTypes();
+});
+
+function getLocations() {
+    return [...new Set(nationalParksArray.map(park => park.State))];
+}
+
+function populateLocations() {
+    const locations = getLocations();
+    const locationDropdown = document.getElementById('locationDropdown');
+    locations.forEach(location => {
+        const option = document.createElement('option');
+        option.value = location;
+        option.textContent = location;
+        locationDropdown.appendChild(option);
+    });
+
+    locationDropdown.onchange = function() {
+        selectedLocationChanged(this.value);
+    };
+}
+
+function selectedLocationChanged(selectedLocation) {
+    filterLocations(selectedLocation);
+}
+
+function filterLocations(location) {
+    const results = nationalParksArray.filter(park => park.State === location);
+    displayResults(results);
+}
+
+function getTypes() {
+    
+    return [...new Set(nationalParksArray.map(park => {
+        if (park.LocationName.includes("Historical")) return "Historical";
+        if (park.LocationName.includes("Recreational")) return "Recreational";
+        return "Other"; // Default 
+    }))];
+}
+
+function populateTypes() {
+    const types = getTypes();
+    const typeDropdown = document.getElementById('typeDropdown');
+    types.forEach(type => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type;
+        typeDropdown.appendChild(option);
+    });
+
+    typeDropdown.onchange = function() {
+        selectedTypeChanged(this.value);
+    };
+}
+
+function selectedTypeChanged(selectedType) {
+    filterTypes(selectedType);
+}
+
+function filterTypes(type) {
+    const results = nationalParksArray.filter(park => {
+        
+        if (type === "Historical" && park.LocationName.includes("Historical")) return true;
+        if (type === "Recreational" && park.LocationName.includes("Recreational")) return true;
+        if (type === "Other") return true;
+        return false;
+    });
+    displayResults(results);
+}
+
+function displayResults(results) {
+    const resultsDiv = document.getElementById('searchResults');
+    resultsDiv.innerHTML = '';
+    results.forEach(park => {
+        const parkDiv = document.createElement('div');
+        parkDiv.innerHTML = `<h3>${park.LocationName}</h3><p>${park.Address}, ${park.City}, ${park.State}</p>`;
+        resultsDiv.appendChild(parkDiv);
+    });
+}
+
+
+
