@@ -376,9 +376,9 @@ body, html {
 
 @media screen and (max-width: 800px) {
     #footer {
-        padding: 20px; /* Reduced padding */
-        font-size: 0.9em; /* Adjust font size */
-        min-height: 200px; /* Increase if necessary to fit content */
+        padding: 20px; 
+        font-size: 0.9em; 
+        min-height: 200px; 
     }
 
     .grid-container {

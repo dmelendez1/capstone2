@@ -6871,52 +6871,45 @@ document.addEventListener("DOMContentLoaded", () => {
     populateTypes();
 });
 
-function getLocations() { 
-    return [...new Set(nationalParksArray.map(park => park.State))]; //create new state list from the array 
+function getLocations() { //create new state list from the array 
+    return [...new Set(nationalParksArray.map(park => park.State))]; // maps each park to its state
 }
 
-function populateLocations() {
+function populateLocations() { //create the locationDropdown w state optiojn
     const locations = getLocations();
     const locationDropdown = document.getElementById('locationDropdown');
     locations.forEach(location => {
-        const option = document.createElement('option');
+        const option = document.createElement('option'); //option element for each state
         option.value = location;
         option.textContent = location;
         locationDropdown.appendChild(option);
     });
 
-    locationDropdown.onchange = function() {
+    locationDropdown.onchange = function() { // 
         selectedLocationChanged(this.value);
     };
 }
 
-function selectedLocationChanged(selectedLocation) {
-    filterLocations(selectedLocation);
+function selectedLocationChanged(selectedLocation) { //when user selects a diff state this function recieves the value
+    filterLocations(selectedLocation); //call function to filter nationalparksarray 
 }
 
-function filterLocations(location) {
-
-
-    const results = nationalParksArray.filter(park => park.State === location);
-
-
-    displayResults(results);
+function filterLocations(location) { //filter parks based on userstate pick
+    const results = nationalParksArray.filter(park => park.State === location); // use filter to find park in choosen state 
+    displayResults(results);  //& displays it
 }
 
-function getTypes() {
+function getTypes() { //creates a new list of parktypesd
     
-    return [...new Set(nationalParksArray.map(park => {
+    return [...new Set(nationalParksArray.map(park => {  //maps each park based on it name
         if (park.LocationName.includes("Historical")) return "Historical";
         if (park.LocationName.includes("Recreational")) return "Recreational";
         return "Other"; // Default 
     }))];
 }
 
-function populateTypes() {
+function populateTypes() { //populates the function with park type options
     const types = getTypes();
-
-    
-
     const typeDropdown = document.getElementById('typeDropdown');
     types.forEach(type => {
         const option = document.createElement('option');
@@ -6934,11 +6927,8 @@ function selectedTypeChanged(selectedType) {
     filterTypes(selectedType);
 }
 
-function filterTypes(type) {
-
-    
-
-    const results = nationalParksArray.filter(park => {
+function filterTypes(type) { //filter parks based on selected type
+    const results = nationalParksArray.filter(park => { //filter the array for parks that match
         
         if (type === "Historical" && park.LocationName.includes("Historical")) return true;
         if (type === "Recreational" && park.LocationName.includes("Recreational")) return true;
@@ -6948,10 +6938,7 @@ function filterTypes(type) {
     displayResults(results);
 }
 
-function displayResults(results) {
-
-    
-
+function displayResults(results) { //display it!
     const resultsDiv = document.getElementById('searchResults');
     resultsDiv.textContent = ''; // Clear existing content
     
