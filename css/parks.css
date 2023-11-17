@@ -35,6 +35,7 @@ body, html {
 
 
 
+
 /*background*/
 .background-container {
     background: url('../images2/bgpark.jpg') no-repeat center center fixed;
@@ -59,7 +60,6 @@ body, html {
     text-shadow: 2px 2px 4px rgb(44, 43, 43);
 }
 
-
 /* Responsive */
 @media (max-width: 768px) {
     .text-overlay h1 {
@@ -77,13 +77,21 @@ body, html {
 
 
 
-/*bg bar*/
+
+/* bar*/
 .park-location-widget {
     background-color: #40431e; 
     padding: 20px 0; 
     width: 100%; 
 }
 
+.col-md-5.form-group {
+    padding: 15px;  
+}
+
+/*.park-location-widget .container-fluid {
+    max-width: none; 
+}*/
 @media (max-width: 768px) {
     .park-location-widget {
         padding: 10px 0; 
@@ -91,9 +99,29 @@ body, html {
 }
 
 
-.park-location-widget .container-fluid {
-    max-width: none; 
+
+
+/*h2*/
+
+.park-guide .inner-border {
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 20px; 
+    max-width: 800px; 
+    margin: 0 auto; 
 }
+
+.park-guide h2 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 50px;
+}
+
+.park-guide p {
+    font-family: 'Prata', serif;
+    font-size: 20px;
+}
+
+
+
 
 
 

@@ -6873,8 +6873,15 @@ function getLocations() {
 }
 
 function populateLocations() {
-    const locations = ["All", ...getLocations()];
     const locationDropdown = document.getElementById('locationDropdown');
+    
+    const placeholder = document.createElement('option');
+    placeholder.textContent = "Location";
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    locationDropdown.appendChild(placeholder);
+
+    const locations = ["All", ...getLocations()];
     locations.forEach(location => {
         const option = document.createElement('option');
         option.value = location;
@@ -6892,8 +6899,15 @@ function getTypes() {
 }
 
 function populateTypes() {
-    const types = ["All", ...getTypes()];
     const typeDropdown = document.getElementById('typeDropdown');
+    
+    const placeholder = document.createElement('option');
+    placeholder.textContent = "Type of Park";
+    placeholder.disabled = true;
+    placeholder.selected = true;
+    typeDropdown.appendChild(placeholder);
+
+    const types = ["All", ...getTypes()];
     types.forEach(type => {
         const option = document.createElement('option');
         option.value = type;
@@ -6917,17 +6931,20 @@ function findParks(selectedLocation, selectedType) {
         results = nationalParksArray;
     } else {
         results = nationalParksArray.filter(park => park.State === selectedLocation);
-        if (selectedType !== "All") {
-            results = results.filter(park => {
-                if (selectedType === "Historical" && park.LocationName.includes("Historical")) return true;
-                if (selectedType === "Recreational" && park.LocationName.includes("Recreational")) return true;
-                if (selectedType === "Other") return true;
-                return false;
-            });
-        }
+    }
+    
+    if (selectedType !== "All") {
+        selectedType = selectedType.toLowerCase(); 
+        results = results.filter(park => {
+            if (selectedType === "historical" && park.LocationName.toLowerCase().includes("historical")) return true;
+            if (selectedType === "recreational" && park.LocationName.toLowerCase().includes("recreational")) return true;
+            if (selectedType === "other") return true;
+            return false;
+        });
     }
     displayResults(results);
 }
+
 
 function displayResults(results) {
     const resultsDiv = document.getElementById('searchResults');
