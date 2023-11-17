@@ -1,11 +1,3 @@
-.search-form {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#searchResults {
-    margin-top: 20px;
-}
 
 body, html {
     height: 100%;
@@ -120,8 +112,28 @@ body, html {
     font-size: 20px;
 }
 
+/*park displayment*/
+#searchResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    font-family: 'Prata', serif;
+    color: black
+}
 
+#searchResults div {
+    text-align: left; 
+    width: 80%; 
+    margin-bottom: 10px; 
+}
 
+.search-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
 

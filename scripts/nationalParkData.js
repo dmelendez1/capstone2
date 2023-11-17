@@ -4952,6 +4952,25 @@ const nationalParksArray = [
     }
     },
     {
+    LocationID: "olym",
+    LocationName: "Olympic National Park",
+    Address: "3002 Mt Angeles Rd",
+    City: "Port Angeles",
+    State: "Washington",
+    ZipCode: 98362,
+    Phone: "(306) 565-3130",
+    Fax: "(307) 739-3438",
+    Latitude: 47.96935,
+    Longitude: -123.49856,
+    Location: {
+        coordinates: [
+        -123.49856,
+        47.96935
+        ],
+        type: "Point"
+    }
+    },
+    {
     LocationID: "OREG",
     LocationName: "Oregon National Historic Trail",
     Address: "National Park Service, 324 S. State St., Suite 200",
@@ -6859,110 +6878,5 @@ const nationalParksArray = [
     }
 ]
 
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    populateLocations();
-    populateTypes();
-    addFindParkButtonEventListener();
-});
-
-function getLocations() {
-    return [...new Set(nationalParksArray.map(park => park.State))];
-}
-
-function populateLocations() {
-    const locationDropdown = document.getElementById('locationDropdown');
-    
-    const placeholder = document.createElement('option');
-    placeholder.textContent = "Location";
-    placeholder.disabled = true;
-    placeholder.selected = true;
-    locationDropdown.appendChild(placeholder);
-
-    const locations = ["All", ...getLocations()];
-    locations.forEach(location => {
-        const option = document.createElement('option');
-        option.value = location;
-        option.textContent = location;
-        locationDropdown.appendChild(option);
-    });
-}
-
-function getTypes() {
-    return [...new Set(nationalParksArray.map(park => {
-        if (park.LocationName.includes("Historical")) return "Historical";
-        if (park.LocationName.includes("Recreational")) return "Recreational";
-        return "Other";
-    }))];
-}
-
-function populateTypes() {
-    const typeDropdown = document.getElementById('typeDropdown');
-    
-    const placeholder = document.createElement('option');
-    placeholder.textContent = "Type of Park";
-    placeholder.disabled = true;
-    placeholder.selected = true;
-    typeDropdown.appendChild(placeholder);
-
-    const types = ["All", ...getTypes()];
-    types.forEach(type => {
-        const option = document.createElement('option');
-        option.value = type;
-        option.textContent = type;
-        typeDropdown.appendChild(option);
-    });
-}
-
-function addFindParkButtonEventListener() {
-    const findParkButton = document.getElementById('findParkButton');
-    findParkButton.onclick = () => {
-        const selectedLocation = document.getElementById('locationDropdown').value;
-        const selectedType = document.getElementById('typeDropdown').value;
-        findParks(selectedLocation, selectedType);
-    };
-}
-
-function findParks(selectedLocation, selectedType) {
-    let results;
-    if (selectedLocation === "All") {
-        results = nationalParksArray;
-    } else {
-        results = nationalParksArray.filter(park => park.State === selectedLocation);
-    }
-    
-    if (selectedType !== "All") {
-        selectedType = selectedType.toLowerCase(); 
-        results = results.filter(park => {
-            if (selectedType === "historical" && park.LocationName.toLowerCase().includes("historical")) return true;
-            if (selectedType === "recreational" && park.LocationName.toLowerCase().includes("recreational")) return true;
-            if (selectedType === "other") return true;
-            return false;
-        });
-    }
-    displayResults(results);
-}
-
-
-function displayResults(results) {
-    const resultsDiv = document.getElementById('searchResults');
-    resultsDiv.textContent = '';
-
-    results.forEach(park => {
-        const parkDiv = document.createElement('div');
-
-        const nameHeading = document.createElement('h3');
-        nameHeading.textContent = park.LocationName;
-        parkDiv.appendChild(nameHeading);
-
-        const addressParagraph = document.createElement('p');
-        addressParagraph.textContent = `${park.Address}, ${park.City}, ${park.State}`;
-        parkDiv.appendChild(addressParagraph);
-
-        resultsDiv.appendChild(parkDiv);
-    });
-}
 
 
