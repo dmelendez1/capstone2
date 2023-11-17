@@ -67,6 +67,23 @@ body, html {
 
 }
 
+/*green bar*/
+.mt-location-widget {
+    background-color: #40431e; 
+    padding: 20px 0; 
+    width: 100%; 
+}
+
+.col-md-5.form-group {
+    padding: 15px;  
+}
+
+@media (max-width: 768px) {
+    .mt-location-widget {
+        padding: 10px 0; 
+    }
+}
+
 
 /*mt h*/
 .mt-guide .inner-border {
