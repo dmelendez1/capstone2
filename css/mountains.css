@@ -68,71 +68,49 @@ body, html {
 }
 
 
-
-
-/* bar*/
-.park-location-widget {
-    background-color: #40431e; 
-    padding: 20px 0; 
-    width: 100%; 
-}
-
-.col-md-5.form-group {
-    padding: 15px;  
-}
-
-/*.park-location-widget .container-fluid {
-    max-width: none; 
-}*/
-@media (max-width: 768px) {
-    .park-location-widget {
-        padding: 10px 0; 
-    }
-}
-
-
-
-
-/*h2*/
-
-.park-guide .inner-border {
-    border-bottom: 1px solid #ccc; 
+/*mt h*/
+.mt-guide .inner-border {
+    border-bottom: 1px solid #0e0b0b; 
     padding-bottom: 20px; 
     max-width: 800px; 
     margin: 0 auto; 
 }
 
-.park-guide h2 {
+.mt-guide h2 {
     font-family: 'Philosopher', sans-serif;
     font-size: 50px;
 }
 
-.park-guide p {
+.mt-guide p {
     font-family: 'Prata', serif;
     font-size: 20px;
 }
 
-/*park displayment*/
-#searchResults {
+/*mt list*/
+.mt-display-module-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.trail-card {
+    display: flex;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.trail-card img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.trail-card .info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 80px;
-    font-family: 'Prata', serif;
-    color: black
-}
-
-#searchResults div {
-    text-align: center; 
-    width: 80%; 
-    margin-bottom: 10px; 
-}
-
-.search-form {
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 
@@ -249,9 +227,9 @@ body, html {
 
 @media screen and (max-width: 800px) {
     #footer {
-        padding: 20px; /* Reduced padding */
-        font-size: 0.9em; /* Adjust font size */
-        min-height: 200px; /* Increase if necessary to fit content */
+        padding: 20px; 
+        font-size: 0.9em; 
+        min-height: 200px; 
     }
 
     .grid-container {
