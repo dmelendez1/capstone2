@@ -269,14 +269,18 @@ body, html {
 /*footer*/
 
 #footer {
-    background: url('../images2/jaggedmt.png') no-repeat center center;
+    /* background: url('../images2/jaggedmt.png') no-repeat center center; */
+    background: url('../images2/jaggedmt-body.png');
     background-size: cover;
     padding: 40px 90px; 
     font-family: 'Philosopher', sans-serif;
     color: whitesmoke;
-    min-height: 100px
+    min-height: 100px;
     
-    
+}
+.footer-mountains {
+    height: 74px;
+    background: url('../images2/jaggedmt-top.png');
 }
 
 .grid-container {
