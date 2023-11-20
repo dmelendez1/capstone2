@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-    populateLocationDropdown();
+document.addEventListener("DOMContentLoaded", () => { 
+    populateLocationDropdown();  // call my three functions
     populateTypeDropdown();
     displayTop10Parks();
 });
 
-function populateLocationDropdown() {
+function populateLocationDropdown() { //pops  a dropdown menu for selectring park locatrion. creates option in dropdown using array.
     const locationDropdown = document.getElementById('locationDropdown');
     locationDropdown.onchange = handleLocationChange;
     addOption(locationDropdown, "Location", true, true);
@@ -43,11 +43,11 @@ function addOption(dropdown, text, isPlaceholder, isSelected) {
 }
 
 function handleLocationChange() {
-    // Optional: Logic when location is changed
+    
 }
 
 function handleTypeChange() {
-    // Optional: Logic when type is changed
+    
 }
 
 document.getElementById('findParkButton').addEventListener('click', () => {
