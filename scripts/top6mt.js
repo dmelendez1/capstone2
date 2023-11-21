@@ -1,4 +1,4 @@
-const mountainsArray = [
+const top6mountainsArray = [
     {
         name: "Mt. Washington",
         elevation: 6288,

@@ -108,26 +108,37 @@ body, html {
     list-style-type: none;
     padding: 0;
     margin: 20px;
+    margin-bottom: 60px;
 }
 
 .trail-card {
     display: flex;
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 4px;
 }
 
 .trail-card img {
-    width: 100px;
+    width: 300px;
     height: auto;
     margin-right: 15px;
+    max-height: 300px;
 }
 
 .trail-card .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.info h3 {
+    font-size: 1.5em; /* Change the font family if needed */
+}
+
+.info p {
+    font-size: 1em; 
+    font-family: 'Prata', serif;  
 }
 
 
@@ -137,20 +148,31 @@ body, html {
 
 /*footer*/
 #footer {
-    background: url('../images2/jaggedmt.png') no-repeat center center;
+    /* background: url('../images2/jaggedmt.png') no-repeat center center; */
+    background: url('../images2/jaggedmt-body.png');
     background-size: cover;
     padding: 40px 90px; 
     font-family: 'Philosopher', sans-serif;
     color: whitesmoke;
-    min-height: 100px
+    min-height: 100px;
     
-    
+}
+
+.footer-spacing {
+    height: 80px;
+}
+
+.footer-mountains {
+    height: 74px;
+    background: url('../images2/jaggedmt-top.png');
+   
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 20px; 
+   
 }
 
 .left-side {
