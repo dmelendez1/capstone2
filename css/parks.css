@@ -32,7 +32,7 @@ body, html {
 .background-container {
     background: url('../images2/bgpark.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 71vh;
+    height: 100vh;
     width: 100%;
     margin-bottom: 0;
 }
