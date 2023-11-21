@@ -32,7 +32,7 @@ body, html {
 .background-container {
     background: url('../images2/bgpark.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 70vh;
+    height: 71vh;
     width: 100%;
     margin-bottom: 0;
 }
@@ -97,14 +97,16 @@ body, html {
 
 .park-guide .inner-border {
     border-bottom: 1px solid #ccc; 
-    padding-bottom: 20px; 
+    padding-bottom: 50px; 
     max-width: 800px; 
     margin: 0 auto; 
+   
 }
 
 .park-guide h2 {
     font-family: 'Philosopher', sans-serif;
     font-size: 50px;
+    margin-top: 40px;
 }
 
 .park-guide p {

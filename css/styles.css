@@ -68,6 +68,7 @@ body, html {
     text-align: center;
     padding-top: 0; 
     margin-top: 0; 
+    margin-bottom: 80px;
 }
 
 .why-wildscape-section h2 {
@@ -75,15 +76,15 @@ body, html {
     background-color: #40431e;
     color: white;
     padding: 10px;
-    margin: 0 0 50px 0; 
+    margin: 0 0 60px 0;
     font-size: 50px;
 }
 
 .why-wildscape-section p {
     font-family: 'Prata', serif;
-    font-size: 20px; 
+    font-size: 26px; 
     max-width: 800px; 
-    margin: 0 auto 30px; 
+    margin: 0 auto 100px; 
 }
 
 @media screen and (max-width: 600px) {
@@ -96,6 +97,35 @@ body, html {
     .why-wildscape-section p {
         font-size: 18px;
     }
+}
+
+
+/*heading&map*/
+.print-map h3 {
+    font-family: 'Philosopher', sans-serif; 
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.print-map p {
+    font-family: 'Prata', serif;
+    font-size: 20px;
+    
+}
+
+
+
+.image-container img {
+    width: 80%; 
+    margin: 0 auto; 
+    display: block; 
+   
+}
+
+.image-container {
+    text-align: center; 
+    margin: 20px 0; 
 }
 
 
@@ -117,11 +147,21 @@ body, html {
 
 .ns-block .intro h3 {
     font-family: 'Prata', serif;
+    font-size: 40px;
     display: flex; 
     align-items: center;
     justify-content: center; 
     gap: 24px; 
 }
+
+.intro p {
+    text-align: center; 
+    font-family: 'Prata', serif;
+    font-size: 26px; 
+    max-width: 800px; 
+    margin: 0 auto 30px;
+}
+
 
 .ns-block .intro h3 span.border-t {
     border-top: 1px solid; 
@@ -244,10 +284,11 @@ body, html {
 
 .section p {
     font-size: 26px; 
+    text-align: center; 
     color: #333; 
     max-width: 800px; 
     margin: 50px auto; 
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     font-family: 'Prata', serif;
 }
 

@@ -30,9 +30,9 @@ body, html {
 
 /*background*/
 .background-container {
-    background: url('../images2/bgpark.jpg') no-repeat center center fixed;
+    background: url('../images2/mtbg.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 70vh;
+    height: 71vh;
     width: 100%;
     margin-bottom: 0;
 }
@@ -96,6 +96,7 @@ body, html {
 .mt-guide h2 {
     font-family: 'Philosopher', sans-serif;
     font-size: 50px;
+    margin-top: 40px;
 }
 
 .mt-guide p {
