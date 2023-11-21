@@ -229,6 +229,7 @@ body, html {
 .right-side {
     grid-column: 3; 
     min-width: 300px; 
+    color: black
     
 }
 
